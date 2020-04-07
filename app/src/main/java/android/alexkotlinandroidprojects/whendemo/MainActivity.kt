@@ -10,10 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val name:String = "Nile"
+        val name:String = "Atlantic"
         when(name) {
             "Atlantic", "Pacific", "Arctic" ->
-                Log.i("Found:", "$name is an ocean")
+                printFullDetailsOfOcean(name)
             "Thames", "Nile", "Mississippi" ->
                 Log.i("Found:", "$name is a river")
             "Labrador", "Beagle", "JAck Russel" ->
@@ -22,5 +22,9 @@ class MainActivity : AppCompatActivity() {
                 Log.i("Not found:", "$name is not in database")
             }
         }
+    }
+
+    fun printFullDetailsOfOcean(name: String) {
+        Log.i("Found:", "$name is an ocean")
     }
 }
